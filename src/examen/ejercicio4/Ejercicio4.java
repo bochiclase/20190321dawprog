@@ -3,7 +3,7 @@ package examen.ejercicio4;
 import java.util.*;
 import java.util.Scanner;
 
-public class Ejercicio4 {
+public class Ejercicio4 { 
 
 	public static void main(String[] args) {
 		Set<Character> almacen = new HashSet<Character>();

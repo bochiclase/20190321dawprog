@@ -4,7 +4,7 @@ import java.awt.Color;
 
 public class Rectangulo extends Figuras {
 	private double medida;
-
+  
 	public Rectangulo(Color color, int x, int y, Color relleno, Color borde, double base, double altura) {
 		super(color, x, y, relleno, borde);
 		this.medida=base*altura;

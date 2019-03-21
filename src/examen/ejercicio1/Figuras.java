@@ -67,7 +67,7 @@ public abstract class  Figuras {
 	public Color getRelleno() {
 		return relleno;
 	}
-
+  
 
 
 	public void setRelleno(Color relleno) {

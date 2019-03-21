@@ -9,7 +9,7 @@ public class Cuadrado extends Figuras {
 				super(color, x, y, relleno, borde);
 				this.Lado=lado;
 			}
-			
+			  
 			public double tamanoArea() {
 				double numero = Math.pow(Lado, 2);
 				return numero;

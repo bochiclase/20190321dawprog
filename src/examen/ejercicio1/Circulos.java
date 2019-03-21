@@ -18,7 +18,7 @@ public class Circulos extends Figuras {
 		double numero = (float)Math.pow(Radio,2);
 		numero = numero * 3.14;
 		return numero;
-	}
+	}  
 
 	public double TamanoPerimetro() {
 		double numero = Radio *2;

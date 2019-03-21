@@ -2,7 +2,7 @@ package examen.ejercicio3;
 
 import java.util.Scanner;
 import java.util.*;
-
+ 
 public class Ejercicio3 {
 	public static void main(String[] args) {
 		String compu;
