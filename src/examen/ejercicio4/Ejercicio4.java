@@ -1,44 +1,61 @@
 package examen.ejercicio4;
 
 import java.util.*;
-import java.util.Scanner;
 
 public class Ejercicio4 { 
 
 	public static void main(String[] args) {
-		Set<Character> almacen = new HashSet<Character>();
-		Map <String,String> agenda = new HashMap <String,String>();
+		Scanner r = new Scanner (System.in);
 		String cadena;
-		char c ;
-		Scanner r = new Scanner(System.in);
+		char c;
+		Set<Character> almacen = new HashSet<Character>();
+		String [] partes = new String [1];
+		Map <String, String> mapa = new HashMap<String,String>();
 		do {
-		System.out.print("Inroduce la cadena");
+		System.out.println("Introduce");
 		cadena = r.nextLine();
-		for (int i = 0; i < cadena.length(); i++) {
-			 c= cadena.charAt(i);
-			 almacen.add(c);
+		for(int i =0; i<cadena.length(); i++) {
+		    c = cadena.charAt(i);
+			almacen.add(c);
 		}
 			if (almacen.contains('-')) {
-				String[] partes = cadena.split("-");
+				partes = cadena.split("-");
 				String  nombre = partes[0]; 
 				String numero = partes[1]; 
-				agenda.put(nombre,numero);
-				if (agenda.containsKey(nombre)) {
-					agenda.remove(nombre);
-					agenda.put(nombre, numero);
-				}
-				else {
-					agenda.put(nombre, numero);
-				}
+				mapa.put(nombre,numero);
+				System.out.println("El numero se guardó en la agenda correctamente");
+				nombre = null;
+				numero = null;
+				almacen.clear();
+				
 			}
-			if (almacen.contains(':')) {
-				String[] partes2 = cadena.split(":");
-				String  simbolo = partes2[0]; 
-				String contacto = partes2[1]; 
-				System.out.println(agenda.get(contacto));
-			}
-		
+			
+			 if (almacen.contains(':')) {
+				partes = cadena.split(":");
+				String  numero = partes[0]; 
+				String nombre = partes[1]; 
+				
+					if (mapa.containsKey(nombre)) {
+						System.out.println(nombre + " -> " + mapa.get(nombre));
+						nombre = null;
+						numero = null;
+						almacen.clear();
 
-	}while(cadena!="exit");
-	}
+						
+					}
+					else {
+						System.out.println("El nombre no esta ni se le espera ;) ");
+						nombre = null;
+						numero = null;
+						almacen.clear();
+					}
+				
+			}
+				
+			
+			 
+		}while(cadena != "fin");
 }
+	}
+	
+
